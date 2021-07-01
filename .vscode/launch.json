@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Nim: Debugger",
+            "preLaunchTask": "Nim: Debug Build",
+            "preRunCommands": [
+                "command script import --allow-reload ./.vscode/lldbnim.py"
+            ],
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Nimble: Debugger",
+            "preLaunchTask": "Nim: Debug Build",
+            "preRunCommands": [
+                "command script import --allow-reload ./.vscode/lldbnim.py"
+            ],
+            "program": "${workspaceFolder}/${workspaceFolderBasename}",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
